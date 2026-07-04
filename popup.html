@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>CP Assistant</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <span class="brain">🧠</span>
+      <span class="title">CP Assistant</span>
+    </header>
+
+    <div id="scan-section">
+      <button id="scanBtn">🔍 Scan Problem</button>
+      <p class="muted">
+        Open a problem on Codeforces, AtCoder, LeetCode, CSES, or CodeChef,
+        then click scan.
+      </p>
+    </div>
+
+    <div id="problem-section" class="hidden">
+      <p id="problemTitle" class="problem-title"></p>
+
+      <div class="actions">
+        <button id="nudgeBtn">💡 Give me a Nudge</button>
+        <button id="explainBtn">❓ Explain Statement</button>
+        <button id="askBtn">🧠 Ask Question</button>
+      </div>
+
+      <div id="levelIndicator" class="muted"></div>
+
+      <div id="inputArea" class="hidden">
+        <textarea id="freeText" rows="2"></textarea>
+        <button id="submitFreeText">Send</button>
+      </div>
+
+      <div id="loading" class="hidden">Thinking…</div>
+      <div id="output" class="output hidden"></div>
+      <div id="errorBox" class="error hidden"></div>
+
+      <button id="rescanBtn" class="secondary">↻ Rescan this page</button>
+    </div>
+  </div>
+
+  <script src="prompts.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
