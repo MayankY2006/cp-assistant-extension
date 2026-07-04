@@ -14,12 +14,11 @@ full solution.
 
 ## Set up your API key
 
-1. Click the extension icon, then **"Set Anthropic API key"** at the bottom
+1. Click the extension icon, then **"Set Groq API key"** at the bottom
    — or right-click the icon → **Options**.
-2. Paste an API key from https://console.anthropic.com/settings/keys and
-   click **Save**.
+2. Paste a Groq API key from https://console.groq.com/keys and click **Save**.
 3. The key is stored only in your browser's local extension storage. All
-   requests go directly from your browser to Anthropic's API — nothing
+   requests go directly from your browser to the Groq API — nothing
    passes through any other server.
 
 ## How to use it
@@ -46,7 +45,7 @@ full solution.
 - `popup.js` injects a small extraction function into the active tab to
   pull the problem title, statement, and sample input/output using
   site-specific selectors (Codeforces, AtCoder, LeetCode, CSES, CodeChef).
-- The extracted text is sent to Claude via the Anthropic Messages API,
+- The extracted text is sent to a Groq-hosted model via the Groq API,
   guided by strict system prompts (see `prompts.js`) that enforce:
   - no naming of algorithms/data structures
   - no code or pseudocode
@@ -63,7 +62,7 @@ full solution.
   if the page just loaded — reload the page fully, then scan.
 - Selectors are based on current site markup and may need updates if these
   platforms redesign their pages.
-- No backend yet — each user supplies their own Anthropic API key. A future
+- No backend yet — each user supplies their own Groq API key. A future
   version could add a shared backend with caching per problem (most value
   for popular problems, much lower cost) as discussed in the product spec.
 - No hint caching yet — every nudge is a fresh API call.
